@@ -20,6 +20,14 @@ skill/
 
 除 `SKILL.md` 外，只有实际需要时才添加 `agents/`、`references/`、`scripts/` 或 `assets/`。
 
+### 跨平台兼容性
+
+- `SKILL.md` 是 Skill 的跨平台核心，包含触发条件和主要工作流。
+- `references/`、`scripts/` 与 `assets/` 是按需加载的通用配套资源。
+- `agents/openai.yaml` 是可选的 Codex/OpenAI 产品适配元数据，用于显示名称、简短说明和默认提示词等界面能力。
+- Claude Code 使用 Skill 时不依赖 `agents/openai.yaml`；该文件不会替代或改变 `SKILL.md` 中的通用指令。
+- 面向多个智能体平台发布时，可以保留各平台的可选适配文件，同时确保核心工作流不依赖任何单一平台。
+
 ## Skills
 
 ### accelerated-domain-learning
