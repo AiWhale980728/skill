@@ -47,6 +47,23 @@ Accelerated Domain Learning（领域加速学习）帮助学习者快速建立�
 
 目录：[accelerated-domain-learning](./accelerated-domain-learning/)
 
+### prd-writer
+
+Universal PRD Writer（通用产品需求设计）把产品想法、业务需求、功能请求和已有规格整理成可评审、可验收、可执行的产品需求。
+
+主要能力：
+
+- 使用同一套需求内核覆盖普通数字产品、AI 产品、Agent 产品和多 Agent 系统
+- 根据阅读对象、产品类型、需求规模和交付物自动选择输出深度
+- 统一定义问题、用户、目标、范围、流程、功能、指标、风险和验收标准
+- 按需加载普通产品交互、AI 能力、Agent 行为和 Coding Spec 模块
+- 区分确定需求、假设、建议、风险、依赖和待决策事项
+- 为 Codex、Claude Code、Cursor 等编程 Agent 派生实现规格
+- 审核现有 PRD 的完整性、一致性、可测试性和 AI/Agent 安全边界
+- 避免固定平台、框架、作者、目录和不必要的模板膨胀
+
+目录：[prd-writer](./prd-writer/)
+
 ### social-visual-content-studio
 
 把关键词、笔记、文章、链接、文件、截图、图表和混合素材转化为可信、清晰、可发布的社交媒体视觉内容。
@@ -72,6 +89,7 @@ Accelerated Domain Learning（领域加速学习）帮助学习者快速建立�
 
 ```bash
 cp -R accelerated-domain-learning ~/.codex/skills/
+cp -R prd-writer ~/.codex/skills/
 cp -R social-visual-content-studio ~/.codex/skills/
 ```
 
@@ -83,6 +101,7 @@ cp -R social-visual-content-studio ~/.codex/skills/
 
 ```bash
 cp -R accelerated-domain-learning ~/.claude/skills/
+cp -R prd-writer ~/.claude/skills/
 cp -R social-visual-content-studio ~/.claude/skills/
 ```
 
@@ -100,6 +119,17 @@ cp -R social-visual-content-studio ~/.claude/skills/
 ```text
 我两天后需要参加量子计算讨论，目前只有基础物理知识。
 请帮我建立可靠的认知骨架，明确共识、争议和未知问题。
+```
+
+### Universal PRD Writer
+
+```text
+使用 $prd-writer 把这个产品想法整理成一份给产品和研发评审的 MVP PRD。
+```
+
+```text
+为这个研究 Agent 编写 PRD，定义工具权限、上下文、人工确认、失败恢复和评估指标，
+然后派生一份可交给 Codex 实现的 Coding Spec。
 ```
 
 ### Social Visual Content Studio
