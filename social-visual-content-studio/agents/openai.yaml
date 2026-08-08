@@ -1,0 +1,4 @@
+interface:
+  display_name: "社交媒体视觉内容工作室"
+  short_description: "把多模态素材转化为可信、清晰、可发布的图文或短视频"
+  default_prompt: "使用 $social-visual-content-studio 分析我的素材，推荐最值得发布的选题、平台和图文或短视频方案。"
