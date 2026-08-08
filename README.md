@@ -22,6 +22,23 @@ skill/
 
 ## Skills
 
+### accelerated-domain-learning
+
+Accelerated Domain Learning（领域加速学习）帮助学习者快速建立陌生领域的可靠认知地图，并通过证据核查、深度问题和自适应追问检验真实理解。
+
+主要能力：
+
+- 校准学习目标、已有基础和可观察的完成标准
+- 建立领域边界、前置概念、心智模型和概念关系
+- 区分领域共识、主要争议、未知问题和前沿方向
+- 按知识类型选择证据来源并标记事实、观点与推断
+- 生成解释、辨析、边界、反例、迁移和证据判断问题
+- 根据回答定位误区、补充前置知识并动态调整深度
+- 用学习者自己的表达生成认知总结和后续学习路线
+- 适用于科学、技术、人文、专业实践及一般知识领域
+
+目录：[accelerated-domain-learning](./accelerated-domain-learning/)
+
 ### social-visual-content-studio
 
 把关键词、笔记、文章、链接、文件、截图、图表和混合素材转化为可信、清晰、可发布的社交媒体视觉内容。
@@ -46,22 +63,38 @@ skill/
 复制所需 Skill 的完整目录到 Codex Skills 目录：
 
 ```bash
+cp -R accelerated-domain-learning ~/.codex/skills/
 cp -R social-visual-content-studio ~/.codex/skills/
 ```
 
-重启或重新载入 Codex 后，通过 `$social-visual-content-studio` 显式调用；满足描述中的使用场景时也可被自动触发。
+重启或重新载入 Codex 后，通过对应名称显式调用；满足 `description` 中的使用场景时也可被自动触发。
 
 ### Claude Code
 
-将完整 Skill 目录复制到 Claude 的 Skills 目录，例如：
+将所需 Skill 的完整目录复制到 Claude 的 Skills 目录，例如：
 
 ```bash
+cp -R accelerated-domain-learning ~/.claude/skills/
 cp -R social-visual-content-studio ~/.claude/skills/
 ```
 
 具体路径和支持能力可能随客户端版本变化，请以所用客户端的当前文档为准。
 
 ## 使用示例
+
+### Accelerated Domain Learning
+
+```text
+使用 $accelerated-domain-learning 帮我快速搞懂行为经济学。
+先建立领域地图，再用深度问题检验我的理解。
+```
+
+```text
+我两天后需要参加量子计算讨论，目前只有基础物理知识。
+请帮我建立可靠的认知骨架，明确共识、争议和未知问题。
+```
+
+### Social Visual Content Studio
 
 ```text
 使用 $social-visual-content-studio 分析这组文章和截图，
@@ -95,7 +128,7 @@ cp -R social-visual-content-studio ~/.claude/skills/
 - 事实可追溯：区分事实、观点、用户素材和创意表达。
 - 渐进加载：只在任务需要时读取详细参考文件。
 - 非破坏性：生成物和修改版保留版本号，不覆盖原始素材。
-- 能力透明：没有图像或视频工具时，交付可执行制作包，不伪装成已生成成品。
+- 能力透明：没有所需工具时，交付可执行方案，不伪装成已完成外部操作。
 
 ## License
 
