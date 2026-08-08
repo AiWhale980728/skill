@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accelerated Domain Learning 领域加速学习"
+  short_description: "快速建立陌生领域的可靠认知地图并检验真实理解"
+  default_prompt: "使用 $accelerated-domain-learning 帮我快速建立这个领域的认知地图，并通过深度问题检验我的理解。"
