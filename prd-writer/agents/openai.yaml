@@ -1,0 +1,4 @@
+interface:
+  display_name: "Universal PRD Writer 通用产品需求设计"
+  short_description: "统一编写普通产品、AI产品、Agent产品与AI开发规格"
+  default_prompt: "使用 $prd-writer 把我的产品想法整理成可评审、可验收的PRD，并按产品类型加载必要模块。"
