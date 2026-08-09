@@ -107,6 +107,75 @@ cp -R social-visual-content-studio ~/.claude/skills/
 
 具体路径和支持能力可能随客户端版本变化，请以所用客户端的当前文档为准。
 
+## 组合工作流
+
+这些 Skills 既可以独立使用，也可以根据任务阶段串联。前一阶段的输出可以作为后一阶段的输入，减少重复沟通，并让研究、产品定义和内容表达保持一致。
+
+### 从陌生领域研究到产品需求
+
+```text
+accelerated-domain-learning
+        ↓
+     prd-writer
+```
+
+1. 使用 `accelerated-domain-learning` 建立领域地图，梳理核心概念、证据、争议和未知问题。
+2. 使用 `prd-writer` 继承已经确认的研究结论，定义目标用户、产品范围、功能需求和验收标准。
+3. 如需进入开发，可继续由 `prd-writer` 派生 Coding Spec。
+
+示例：
+
+```text
+我想做一个帮助普通人理解个人碳足迹的 AI 产品。
+
+先使用 $accelerated-domain-learning 帮我建立碳核算领域地图，
+区分行业共识、争议和仍需验证的问题。
+
+完成后，使用 $prd-writer 将研究结论整理成一份 MVP PRD，
+并标记继承的事实、产品假设和待验证事项。
+```
+
+### 从产品需求到发布内容
+
+```text
+prd-writer
+     ↓
+social-visual-content-studio
+```
+
+1. 使用 `prd-writer` 明确产品定位、目标用户、核心功能、价值和能力边界。
+2. 使用 `social-visual-content-studio` 将已确认的产品信息转化为适合目标平台的轮播图或短视频。
+3. 发布内容中的产品能力、数据和限制应与 PRD 保持一致。
+
+示例：
+
+```text
+先使用 $prd-writer 整理这款 AI 会议助手的 MVP PRD。
+
+然后使用 $social-visual-content-studio，
+基于已确认的目标用户、核心价值和能力边界，
+制作一套适合 LinkedIn 发布的产品介绍轮播图。
+不要把待验证假设写成已经实现的能力。
+```
+
+### 从领域研究到产品定义与内容发布
+
+```text
+accelerated-domain-learning
+        ↓
+     prd-writer
+        ↓
+social-visual-content-studio
+```
+
+这条端到端工作流适用于从零进入一个领域并形成产品方案的任务：
+
+1. 建立领域认知和证据基础。
+2. 将机会转化为可评审、可验收的产品需求。
+3. 将已经确认的产品信息转化为可信的发布内容。
+
+每个阶段都应区分已确认事实、合理推断、产品假设和待验证事项，避免未经验证的信息被下游 Skill 当作事实使用。
+
 ## 使用示例
 
 ### Accelerated Domain Learning
