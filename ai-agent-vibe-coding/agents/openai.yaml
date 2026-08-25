@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Agent 产品 Vibe Coding"
+  short_description: "从 PRD 到前端验收与上线的 AI Agent 产品工程工作流"
+  default_prompt: "使用 $ai-agent-vibe-coding，把这份 AI Agent PRD 或现有项目推进为分阶段、可测试、可上线的产品。"

@@ -64,6 +64,23 @@ Universal PRD Writer（通用产品需求设计）把产品想法、业务需求
 
 目录：[prd-writer](./prd-writer/)
 
+### ai-agent-vibe-coding
+
+AI Agent Vibe Coding 把已确认的 PRD 或现有 AI Agent 代码库推进为分阶段、可测试、可验收、可上线的产品。
+
+主要能力：
+
+- 判断当前处于技术适配、核心 Agent 链路、正式前端、发布准备还是部署阶段
+- 在后端先行与纵向切片之间选择适合产品形态的开发路径
+- 约束 Agent 状态、持久化、Prompt、模型输出校验、工具权限和人工确认点
+- 设计流式输出、轮询、失败、取消、断线、恢复和多媒体产物体验
+- 区分 Mock 测试、真实模型冒烟、浏览器验证、远端部署和产品负责人验收
+- 提供技术适配、阶段开发、状态矩阵、验收清单和交付报告模板
+- 支持以火山引擎 veFaaS 为默认参考的上线流程，同时要求部署当日复核官方能力
+- 保护凭据、数据隔离、备份恢复、成本授权和外部写入边界
+
+目录：[ai-agent-vibe-coding](./ai-agent-vibe-coding/)
+
 ### social-visual-content-studio
 
 把关键词、笔记、文章、链接、文件、截图、图表和混合素材转化为可信、清晰、可发布的社交媒体视觉内容。
@@ -90,6 +107,7 @@ Universal PRD Writer（通用产品需求设计）把产品想法、业务需求
 ```bash
 cp -R accelerated-domain-learning ~/.codex/skills/
 cp -R prd-writer ~/.codex/skills/
+cp -R ai-agent-vibe-coding ~/.codex/skills/
 cp -R social-visual-content-studio ~/.codex/skills/
 ```
 
@@ -102,6 +120,7 @@ cp -R social-visual-content-studio ~/.codex/skills/
 ```bash
 cp -R accelerated-domain-learning ~/.claude/skills/
 cp -R prd-writer ~/.claude/skills/
+cp -R ai-agent-vibe-coding ~/.claude/skills/
 cp -R social-visual-content-studio ~/.claude/skills/
 ```
 
@@ -156,6 +175,28 @@ social-visual-content-studio
 基于已确认的目标用户、核心价值和能力边界，
 制作一套适合 LinkedIn 发布的产品介绍轮播图。
 不要把待验证假设写成已经实现的能力。
+```
+
+### 从产品需求到可验收 AI Agent 产品
+
+```text
+prd-writer
+     ↓
+ai-agent-vibe-coding
+```
+
+1. 使用 `prd-writer` 明确目标用户、产品范围、Agent 行为、风险边界和验收标准。
+2. 使用 `ai-agent-vibe-coding` 读取已确认的 PRD 与现有代码，输出技术适配并选择后端先行或纵向切片路径。
+3. 按真实业务闭环推进核心 Agent、正式前端、真实模型验证和上线准备；各阶段分别保留测试、部署与负责人验收证据。
+
+示例：
+
+```text
+先使用 $prd-writer 把这款研究 Agent 整理成可评审的 MVP PRD。
+
+PRD 确认后，使用 $ai-agent-vibe-coding 检查现有代码，
+先给出简洁的技术适配，再完成第一条真实、可恢复、可验收的 Agent 闭环。
+不要用 Mock 或构建成功冒充真实模型与产品验收。
 ```
 
 ### 从领域研究到产品定义与内容发布
@@ -216,6 +257,14 @@ social-visual-content-studio
 ```text
 把这个产品演示整理成 45 秒竖屏短视频，
 交付逐镜脚本、旁白、字幕和关键帧提示词。
+```
+
+### AI Agent Vibe Coding
+
+```text
+使用 $ai-agent-vibe-coding，根据这份已确认的 PRD 和现有代码，
+判断当前阶段并完成下一条最小真实 Agent 闭环。
+分别报告 Mock 测试、真实模型冒烟、浏览器验证和负责人验收状态。
 ```
 
 ## 新增 Skill 的约定
